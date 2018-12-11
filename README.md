@@ -1,16 +1,16 @@
 # imiv2owl
 Generate OWL ontology from imiv
 
-# Usage
 
-## install
+# Installation
 
 ```sh
-$ npm i indigo-lab/imiv2owl
+$ npm i imiv2owl
 ```
 
-## CLI
+# Usage
 
+## CLI
 
 from file:
 
@@ -19,13 +19,13 @@ $ wget https://imi.go.jp/ns/core/241/imicore241.imiv
 $ imiv2owl imicore241.imiv > imicore241.jsonld
 ```
 
-from stdin:
+or from stdin:
 
 ```sh
 $ curl -s https://imi.go.jp/ns/core/241/imicore241.imiv | imiv2owl > imicore241.jsonld
 ```
 
-## API
+## Node
 
 ```js
 const imiv2owl = require('imiv2owl');
@@ -41,5 +41,7 @@ property ex:say{@xsd:string};
 set ex:Animal>ex:say;
 
 `);
+
+console.log(JSON.stringify(jsonld,null,2));
 
 ```

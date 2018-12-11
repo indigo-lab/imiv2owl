@@ -1,6 +1,6 @@
 {
   "name": "imiv2owl",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Generate OWL ontology from imiv",
   "main": "imiv2owl.js",
   "scripts": {
