@@ -1,0 +1,8 @@
+#prefix ex: "http://example.org/"
+#prefix xsd: "http://www.w3.org/2001/XMLSchema#"
+vocabulary "http://example.org/" ;
+
+class ex:Animal;
+class ex:Cat{@ex:Animal};
+property ex:say{@xsd:string};
+set ex:Animal>ex:say;

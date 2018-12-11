@@ -24,7 +24,16 @@ const tree = function(target, id) {
   const actual = await jsonld.flatten(imiv2owl(imiv));
   const expected = await jsonld.flatten(json);
 
-  describe('IMIV2OWL main', function() {
+  describe('IMIV2OWL', function() {
+
+    describe('simple', function() {
+      it(`simple.imiv の変換結果が simple.jsonld と一致すること`, function() {
+        const ac = imiv2owl(fs.readFileSync(__dirname + "/simple.imiv", "UTF-8"));
+        const ex = JSON.parse(fs.readFileSync(__dirname + "/simple.jsonld", "UTF-8"));
+        expect(ac).to.deep.equal(ex);
+      });
+    });
+
 
     describe('トリプル数', function() {
       it(`主語の総数が ${expected.length} であること`, function() {

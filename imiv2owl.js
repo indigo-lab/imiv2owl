@@ -108,6 +108,9 @@ module.exports = function(imiv) {
       if (b.type === "published_date") add(ontology, "dct:issued", b);
       if (b.type === "version") add(ontology, "owl:versionInfo", b);
       if (b.type === "license_ref") add(ontology, "dct:license", b.data);
+      if (b.type === "prefix" && jsonld["@context"][b.prefix] === undefined) {
+        jsonld["@context"][b.prefix] = b.data;
+      }
     });
     //  jsonld["@graph"].push(a);
     jsonld["@graph"].push(ontology);
