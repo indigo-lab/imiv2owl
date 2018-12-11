@@ -1,0 +1,35 @@
+{
+  "name": "imiv2owl",
+  "version": "0.0.1",
+  "description": "Generate OWL ontology from imiv",
+  "main": "imiv2owl.js",
+  "scripts": {
+    "test": "mocha --delay"
+  },
+  "bin": "bin/imiv2owl.js",
+  "files": [
+    "bin/imiv2owl.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/indigo-lab/imiv2owl.git"
+  },
+  "keywords": [
+    "imiv",
+    "imi"
+  ],
+  "author": "indigo-lab",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/indigo-lab/imiv2owl/issues"
+  },
+  "homepage": "https://github.com/indigo-lab/imiv2owl#readme",
+  "dependencies": {
+    "imiv-parser": "^1.0.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "jsonld": "^1.1.0",
+    "mocha": "^5.2.0"
+  }
+}
