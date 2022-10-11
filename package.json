@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "jsonld": "^1.1.0",
+    "jsonld": "^8.1.0",
     "mocha": "^5.2.0"
   }
 }
